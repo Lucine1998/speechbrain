@@ -22,14 +22,13 @@ data_folder: !PLACEHOLDER # e,g./path/to/LibriSpeech
 # data_folder_rirs: !ref <data_folder>
 train_splits: ["train-clean-100"]
 dev_splits: ["dev-clean"]
-test_splits: ["test-clean", "test-other"]
+test_splits: ["test-clean"]
 skip_prep: True
 ckpt_interval_minutes: 25 # save checkpoint every N min
-train_csv: !ref results/ft/csv/train.csv
-valid_csv: !ref results/ft/csv/dev-clean.csv
+train_csv: !ref /content/drive/MyDrive/Best_RQ_thesis/data/librispeech_prepared2/train-clean-100.csv
+valid_csv: /content/drive/MyDrive/Best_RQ_thesis/data/librispeech_prepared2/dev-clean.csv
 test_csv:
-   - !ref results/ft/csv/test-clean.csv
-   - !ref results/ft/csv/test-other.csv
+   - !ref /content/drive/MyDrive/Best_RQ_thesis/data/librispeech_prepared2/test-clean.csv
 
 # Training parameters
 number_of_epochs: 30
