@@ -25,14 +25,13 @@ dev_splits: ["dev-clean"]
 test_splits: ["test-clean"]
 skip_prep: True
 ckpt_interval_minutes: 25 # save checkpoint every N min
-train_csv: !ref /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/train.csv
-valid_csv: /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/valid.csv
+train_csv: !ref /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/new_train.csv
+valid_csv: /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/new_valid.csv
 test_csv:
-   - !ref /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/test.csv
-   - !ref /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/valid.csv
+   - !ref /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/new_test.csv
 
 # Training parameters
-number_of_epochs: 30
+number_of_epochs: 35
 lr: 0.0003
 lr_wav2vec: 0.00005
 precision: fp32 # bf16, fp16 or fp32
