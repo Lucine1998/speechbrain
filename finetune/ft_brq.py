@@ -339,6 +339,9 @@ def dataio_prepare(hparams):
         special_labels=special_labels,
         sequence_input=True,
     )
+    ######################
+    label_encoder.add_unk()
+    ######################
 
     # 4. Set output:
     sb.dataio.dataset.set_output_keys(
