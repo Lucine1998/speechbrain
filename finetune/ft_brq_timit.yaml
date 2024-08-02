@@ -26,9 +26,10 @@ test_splits: ["test-clean"]
 skip_prep: True
 ckpt_interval_minutes: 25 # save checkpoint every N min
 train_csv: !ref /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/new_train.csv
-valid_csv: /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/new_valid.csv
+valid_csv: !ref /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/new_valid.csv
 test_csv:
    - !ref /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/new_test.csv
+   - !ref /content/drive/MyDrive/Best_RQ_thesis/data/TIMIT_prepared/new_valid.csv
 
 # Training parameters
 number_of_epochs: 35
